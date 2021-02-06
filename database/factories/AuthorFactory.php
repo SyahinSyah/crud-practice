@@ -23,9 +23,10 @@ class AuthorFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'bio' => $this->faker->regexify('[A-Za-z0-9]{20}'),
+            'bio' => $this->faker->text,
             'age' =>  $this->faker->randomDigit,
             'country' => $this->faker->country,
+            'imageUrl' => $this->faker->imageUrl,
         ];
     }
 }

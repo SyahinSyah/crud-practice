@@ -28,6 +28,7 @@ class BookFactory extends Factory
              'page' => $this->faker->randomDigit,
              'price' => $this->faker->randomDigit,
              'color' => $this->faker->colorName,
+             'author_id' => $this->faker->randomDigit,
         ];
     }
 }

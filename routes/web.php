@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/' , [BookController::class , 'index']);
+Route::get('/{author}', [AuthorController::class, 'index']);
+Route::redirect('/book', '/', 301);
+
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });

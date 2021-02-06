@@ -19,6 +19,7 @@ class CreateAuthorsTable extends Migration
             $table->string('bio');
             $table->integer('age');
             $table->string('country');
+            $table->string('imageUrl');
             $table->timestamps();
         });
     }

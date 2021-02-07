@@ -24,7 +24,7 @@ class BookFactory extends Factory
         return [
              'name' =>$this->faker->name,
              'summary' => $this->faker->text,
-             'imageUrl' => $this->faker->imageUrl,
+             'imageUrl' => $this->faker->imageUrl(),
              'page' => $this->faker->randomDigit,
              'price' => $this->faker->randomDigit,
              'color' => $this->faker->colorName,

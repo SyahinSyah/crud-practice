@@ -23,7 +23,7 @@ class CreateBooksTable extends Migration
             $table->string('color');
             $table->foreignId('author_id')
             ->references('id')
-            ->on('authors')->onDelete('cascade');
+            ->on('authors');
             $table->timestamps();
         });
     }

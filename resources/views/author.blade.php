@@ -3,14 +3,14 @@
     <body>
     <div class="flex h-screen">
         <div class="w-1/2 flex justify-center p-4 shadow-md">
-           <img src="{{$author->imageUrl}}" alt="image">
+           <img src="{{$author->imageUrl}}" alt="image" class="rounded-lg">
         </div>
 
-        <div class="w-1/2 flex  h-screen justify-center items-center ">
-            <div class="p-56">
+        <div class="w-1/2 flex  h-screen justify-center items-center bg-indigo-50">
+            <div class="">
                 <div class="w-96 m-auto ">
                     <div
-                  class=" grid grid-cols-3 grid-rows-7 grid-flow-row overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                  class=" grid grid-cols-2 grid-rows-7 grid-flow-row overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
                 >
                   <div class="col-span-3 row-span-4 p-1 m-1">
                     <a href="#">

@@ -7,28 +7,29 @@
                 <thead>
                     <tr>
                         <th class="px-3 py-5  border-b border-grey-light ">Book</th>
-                        <th>Description</th>
-                        <th>Overview</th>
-                        <th>Price</th>
-                        <th>Page</th>
-                        <th>Color</th>
-                        <th>Author</th>
+                        <th class="px-3 py-5  border-b border-grey-light ">Overview</th>
+                        <th class="px-3 py-5  border-b border-grey-light ">Description</th>
+                        <th class="px-3 py-5  border-b border-grey-light ">Price</th>
+                        <th class="px-3 py-5  border-b border-grey-light ">Page</th>
+                        <th class="px-3 py-5  border-b border-grey-light ">Color</th>
+                        <th class="px-3 py-5  border-b border-grey-light ">Author</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($books as $book)
-                    <tr class="hover:bg-grey-lighter">
-                        <td>{{$book->name}}</td>
-                        <td>{{$book->summary}}</td>
-                        <td><img src="{{$book->imageUrl}}" alt="test"></td>
-                        <td>{{$book->price}}</td>
-                        <td>{{$book->page}}</td>
-                        <td>{{$book->color}}</td>
-                        <td><a href="/{{$book->author->id}}">{{$book->author->name}}</a></td>
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-2">{{$book->name}}</td>
+                        <td class="p-2"><img src="{{$book->imageUrl}}" alt="test" class="rounded-lg "></td>
+                        <td class="p-2">{{$book->summary}}</td>
+                        <td class="text-center"><span>RM   </span>{{$book->price}}</td>
+                        <td class="text-center">{{$book->page}}</td>
+                        <td class="p-2">{{$book->color}}</td>
+                        <td class="p-2"><a href="/{{$book->author->id}}" class="hover:underline hover:text-blue-500">{{$book->author->name}}</a></td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
+            {{ $books->links() }}
         </div>
     </div>
 

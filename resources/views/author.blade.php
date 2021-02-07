@@ -24,18 +24,20 @@
               
                   <div class="col-span-3 row-span-1">
                     <div class="flex align-bottom flex-col leading-none p-2 md:p-4">
-                      <div class="flex flex-row justify-between items-center">
+                      <div class="flex flex-wrap justify-between items-center ">
+                        <div class="w-1/15 sm:w-4/12 px-4">
                         <p
-                          class="flex items-center  text-black" >
+                          class="flex items-center  text-black ">
                           <img
                             alt="Placeholder"
-                            class="block rounded-full"
-                            src="https://picsum.photos/32/32/?random"
+                            class="block rounded-lg object-scale-down"
+                            src="{{$author->imageUrl}}"
                           />
+                        </div>
                           <span class="ml-2 text-sm"> {{$author->name}} </span>
                       </p>
                         <p  class="text-black ml-2 text-sm">
-                        {{$author->age}} <span>years old</span>
+                        {{$author->age}}  <span>years' old </span>
                       </p>
 
                       </div>
@@ -51,11 +53,6 @@
                           {{$author->bio}}
                         </p>
                     </h1>
-                    <h6>
-                        <p class=" text-sm no-underline text-black ">
-                            {{$author->country}}
-                        </p>
-                    </h6>
                     </header>
                   </div>
 

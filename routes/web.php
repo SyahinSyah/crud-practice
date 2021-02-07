@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +16,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('home' , [Controller::class , 'home']);
 Route::get('/' , [BookController::class , 'index']);
-Route::get('/{author}', [AuthorController::class, 'index']);
+Route::get('/book/{author}', [AuthorController::class, 'index']);
+Route::get('register', [LoginController::class, 'create']);
+Route::get('login', [LoginController::class, 'index']);
+Route::post('login', [LoginController::class, 'login']);
 Route::redirect('/book', '/', 301);
 
 

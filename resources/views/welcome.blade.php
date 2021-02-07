@@ -19,12 +19,12 @@
                     @foreach ($books as $book)
                     <tr class="hover:bg-gray-50">
                         <td class="p-2">{{$book->name}}</td>
-                        <td class="p-2"><img src="{{$book->imageUrl}}" alt="test" class="rounded-lg "></td>
+                        <td class="p-2"><img src="{{$book->imageUrl}}" alt="test" class="rounded-lg  object-scale-down"></td>
                         <td class="p-2">{{$book->summary}}</td>
                         <td class="text-center"><span>RM   </span>{{$book->price}}</td>
                         <td class="text-center">{{$book->page}}</td>
                         <td class="p-2">{{$book->color}}</td>
-                        <td class="p-2"><a href="/{{$book->author->id}}" class="hover:underline hover:text-blue-500">{{$book->author->name}}</a></td>
+                        <td class="p-2"><a href="/book/{{$book->author->id}}" class="hover:underline hover:text-blue-500">{{$book->author->name}}</a></td>
                     </tr>
                     @endforeach
                 </tbody>

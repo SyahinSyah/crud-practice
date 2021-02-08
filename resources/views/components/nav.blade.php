@@ -19,15 +19,19 @@
                   <nav>
                      <ul class="md:flex items-center justify-between text-base text-blue-600 pt-4 md:pt-0">
                         <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="/">Home</a></li>
-                        <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">My Books</a></li>
+                        <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="/mybook">My Books</a></li>
                         <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">About</a></li>
                      </ul>
                   </nav>
                </div>
                
+              
                <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
                   <div class="auth flex items-center w-full md:w-full">
-                     <button class="bg-green-600 text-gray-200  p-2 rounded  hover:bg-gray-100 hover:text-gray-800 border border-gray-700">Log Out</button>
+                     <form method="POST" action="/logout">
+                        @csrf
+                     <button class="bg-green-600 text-gray-200  p-2 rounded  hover:bg-gray-100 hover:text-gray-800 border border-gray-700" type="submit">Log Out</button>
+                     </form>
                   </div>
                </div>
             </div>

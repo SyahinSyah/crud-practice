@@ -9,7 +9,7 @@ class Book extends Model
 {
     use HasFactory;
 
-    protected $guarded = [ 'author_id'];
+    protected $guarded = [ 'author_id', 'user_id'];
 
     public function user()
     {

@@ -16,13 +16,31 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('home' , [Controller::class , 'home']);
-Route::get('/' , [BookController::class , 'index']);
-Route::get('/book/{author}', [AuthorController::class, 'index']);
-Route::get('register', [LoginController::class, 'create']);
+
 Route::get('login', [LoginController::class, 'index']);
 Route::post('login', [LoginController::class, 'login']);
-Route::redirect('/book', '/', 301);
+Route::post('/logout', [LoginController::class, 'destroy']);
+Route::get('register', [LoginController::class, 'create']);
+Route::get('home' , [Controller::class , 'home'])->name('login');
+
+Route::group(['middleware' => ['auth']]  , function () {
+    Route::get('/' , [BookController::class , 'index']);
+    Route::get('/book/{author}', [AuthorController::class, 'index']);
+    Route::redirect('/book', '/', 301);
+    Route::get('/mybook', [BookController::class , 'view']);
+});
+
+
+
+
+// Route::get('home' , [Controller::class , 'home']);
+// Route::get('/' , [BookController::class , 'index']);
+// Route::get('/book/{author}', [AuthorController::class, 'index']);
+// Route::get('register', [LoginController::class, 'create']);
+// Route::get('login', [LoginController::class, 'index']);
+// Route::post('login', [LoginController::class, 'login']);
+// Route::post('/logout', [LoginController::class, 'destroy']);
+// Route::redirect('/book', '/', 301);
 
 
 

@@ -1,7 +1,7 @@
 <html>
     <x-nav/>
 
-    <div class="w-2/3 mx-auto flex justify-center">
+    <div class="w-2/3 mx-auto flex justify-center" >
         <div class="bg-white shadow-md rounded my-6">
             <table class="text-left w-full border-collapse">
                 <thead>
@@ -11,7 +11,7 @@
                         <th class="px-3 py-5  border-b border-grey-light ">Description</th>
                         <th class="px-3 py-5  border-b border-grey-light ">Price</th>
                         <th class="px-3 py-5  border-b border-grey-light ">Page</th>
-                        <th class="px-3 py-5  border-b border-grey-light ">Color</th>
+                        <th class="px-3 py-5  border-b border-grey-light ">Coulor</th>
                         <th class="px-3 py-5  border-b border-grey-light ">Author</th>
                     </tr>
                 </thead>

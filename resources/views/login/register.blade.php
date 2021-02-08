@@ -21,7 +21,6 @@
                     <a href="/home" class="p-1 border border-collapse border-indigo-500 rounded  bg-red-500 hover:bg-indigo-100">Cancel</a>
                 </form>
                 </div>
-                
         </div>
     </div>
 </body>

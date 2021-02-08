@@ -35,5 +35,16 @@ class LoginController extends Controller
         ])->withInput();
     }
 
+    public function destroy(Request $request)
+    {
+        //logout function 
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/home');
+    }
 
 }
